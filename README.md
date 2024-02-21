@@ -1,5 +1,6 @@
 # ReactJs Quiz App
-
+This Website is quiz application where 10 MCQ's will appear , after answer that 10 MCQ's ,you are granted what score out of 10 . 
+Restart Quiz option is also available  
 
 ## Tools
 ![icons8-react-native-48](https://github.com/Salarkhan-9/React-Quiz-App/assets/98265148/c1f280d0-b1b8-4f41-961a-d58289ca0b5c)
