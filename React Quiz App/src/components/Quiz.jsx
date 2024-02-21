@@ -45,12 +45,12 @@ const Quiz = () => {
   return (
     <div className='container mx-auto p-4 text-center bg-gradient-to-r from-purple-200 to-gray-700'>
       <div className='min-h-screen flex flex-col justify-center'>
-        <h1 className='text-4xl font-bold mb-4 text-black '>Quiz App</h1>
+        <h1 className='text-4xl font-bold mb-4 text-gray-800 '>Quiz App</h1>
         {questions.length > 0 ? (
           showScore ? (
             <div>
               <h2 className='text-xl font-semibold mb-4'>Your Score: {score}/{questions.length}</h2>
-              <button  className='bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-700' onClick={() => window.location.reload()}>Restart Quiz</button>
+              <button  className='bg-yellow-500 text-white px-5 py-2 rounded-md hover:bg-yellow-700' onClick={() => window.location.reload()}>Restart Quiz</button>
             </div>
           ) : (
             <div className=" mx-52 bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
