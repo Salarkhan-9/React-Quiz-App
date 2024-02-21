@@ -65,7 +65,7 @@ const Quiz = () => {
             </div>
           )
         ) : (
-          <p>Loading...</p>
+          <p className='font-semibold text-red-600'>Loading...</p>
         )}
       </div>
     </div>
