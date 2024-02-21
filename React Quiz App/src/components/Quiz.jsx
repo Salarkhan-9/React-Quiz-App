@@ -43,23 +43,24 @@ const Quiz = () => {
   };
 
   return (
-    <>
-      <div>
-        <h1>Quiz App</h1>
+    <div className='container mx-auto p-4 text-center bg-gradient-to-r from-purple-200 to-gray-700'>
+      <div className='min-h-screen flex flex-col justify-center'>
+        <h1 className='text-4xl font-bold mb-4 text-black '>Quiz App</h1>
         {questions.length > 0 ? (
           showScore ? (
             <div>
-              <h2>Your Score: {score}/{questions.length}</h2>
-              <button onClick={() => window.location.reload()}>Restart Quiz</button>
+              <h2 className='text-xl font-semibold mb-4'>Your Score: {score}/{questions.length}</h2>
+              <button  className='bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-700' onClick={() => window.location.reload()}>Restart Quiz</button>
             </div>
           ) : (
-            <div>
-              <h2>Question {currentQuestion + 1}/{questions.length}</h2>
-              <p>{questions[currentQuestion].question}</p>
-              <div>
+            <div className=" mx-52 bg-purple-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+              <h2 className='text-xl font-semibold mb-4 text-blue-900'>Question {currentQuestion + 1}/{questions.length}</h2>
+              <p className='text-lg mb-4 font-semibold'>{questions[currentQuestion].question}</p>
+              <div className='grid grid-cols-2 gap-4 mx-44'>
                 {questions[currentQuestion].incorrect_answers.map((option, index) => (
-                  <button key={index} onClick={() => handleClick(option)}>{option}</button>
+                  <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" key={index} onClick={() => handleClick(option)}>{option}</button>
                 ))}
+                <button className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" onClick={()=>handleClick(questions[currentQuestion].correct_answer)}>{questions[currentQuestion].correct_answer}</button>
               </div>
             </div>
           )
@@ -67,7 +68,7 @@ const Quiz = () => {
           <p>Loading...</p>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
